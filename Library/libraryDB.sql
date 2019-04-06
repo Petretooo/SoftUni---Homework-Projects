@@ -1,8 +1,0 @@
-USE book_library;
-
-CREATE TABLE books{
-	'id' INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-	'title' VARCHAR(255) NOT NULL,
-	'status' VARCHAR(255) NOT NULL,
-	'price' DOUBLE 
-};
