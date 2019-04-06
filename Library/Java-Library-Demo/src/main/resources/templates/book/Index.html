@@ -1,0 +1,27 @@
+<div class="button-holder" xmlns:th="http://www.w3.org/1999/xhtml">
+        <a type="button" th:href="@{/create}" class="button">Add a new Book</a>
+    </div>
+    <div class="content">
+        <div class="header">
+            <div class="book-label">Title</div>
+            <div class="book-label">Author</div>
+            <div class="book-label">Price</div>
+            <div class="actions-label">Actions</div>
+        </div>
+        <th:block th:each="book : ${books}" xmlns:th="http://www.w3.org/1999/xhtml">
+        <div class="main">
+                <div class="book">
+                    <div class="book-title"th:text=${book.title}>
+                    </div>
+                    <div class="book-item" th:text=${book.author}>
+                    </div>
+                    <div class="book-item"th:text=${book.price}>
+                    </div>
+                    <div class="project-actions">
+                        <a type="button" th:href="@{/edit/{id}(id=${book.id})}" class="bookbutton">Edit</a>
+                        <a type="button" th:href="@{/delete/{id}(id=${book.id})}" class="bookbutton">Remove</a>
+                    </div>
+                </div>
+        </div>
+        </th:block>
+    </div>

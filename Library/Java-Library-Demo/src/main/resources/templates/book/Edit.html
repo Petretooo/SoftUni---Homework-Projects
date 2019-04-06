@@ -1,0 +1,22 @@
+<form class="book-create" th:action="@{/edit/{id}(id=${book.id})}" method="post"
+      xmlns:th="http://www.w3.org/1999/xhtml">
+        <div class="create-header">
+            Edit Book
+        </div>
+        <div class="create-title">
+            <div class="create-title-label">Title</div>
+            <input type="text" class="create-title-content" name="title" th:value="${book.title}" required/>
+        </div>
+        <div class="create-bookitem">
+            <div class="create-bookitem-label">Author</div>
+            <input type="text" rows="3" class="create-bookitem-content" name="author" th:value="${book.author}" required />
+        </div>
+        <div class="create-bookitem">
+            <div class="create-bookitem-label">Price</div>
+            <input type="number" step="any" min="1" rows="3" class="create-bookitem-content" name="price" th:value="${book.price}" required/>
+        </div>
+        <div class="create-button-holder">
+            <button type="submit" class="button">Edit Book</button>
+            <a type="button" th:href="@{/}" class="button">Back</a>
+        </div>
+    </form>
