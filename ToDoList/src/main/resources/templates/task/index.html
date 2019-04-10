@@ -1,0 +1,17 @@
+<section class="home" xmlns:th="http://www.w3.org/1999/xhtml">
+    <h2>Tasks</h2>
+    <th:block th:each="task : ${tasks}">
+        <article>
+            <h3 th:text="${task.title}"></h3>
+            <p th:text="${task.comments}"></p>
+
+            <div>
+            <a th:href="@{/delete/{id}(id=${task.id})}" class="fas fa-trash-alt"></a>
+
+            <a th:href="@{/edit/{id}(id=${task.id})}" class="fas fa-edit"></a>
+
+            </div>
+        </article>
+    </th:block>
+    <a id="create-button" th:href="@{/create}">Create New</a>
+</section>

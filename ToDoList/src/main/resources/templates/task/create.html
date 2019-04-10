@@ -1,0 +1,17 @@
+<div id="create-wrapper" xmlns:th="http://www.w3.org/1999/xhtml">
+    <section class="create">
+        <article>
+            <form th:action="@{/create}" method="POST">
+                <div class="row">
+                    <label for="task">Task:</label>
+                    <input type="text" id="task" name="title" />
+
+                    <label for="comments">Comments:</label>
+                    <textarea id="comments" name="comments"></textarea>
+                </div>
+                <button type="submit">Create</button>
+                <a th:href="@{/}">Cancel</a>
+            </form>
+        </article>
+    </section>
+</div>

@@ -1,0 +1,20 @@
+<div id="edit-wrapper" xmlns:th="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
+    <section class="edit">
+        <article>
+            <form th:action="@{/edit/{id}(id=${task.id})}" method="POST">
+                <div class="row" >
+                    <label for="task">Task:</label>
+                    <input type="text"th:value="${task.title}" id="task" name="title" />
+                </div>
+                <div class="row">
+                    <label for="comments">Comments:</label>
+                    <textarea id="comments"th:text="${task.comments}" name="comments"></textarea>
+                </div>
+                <div>
+                <button type="submit">Edit</button>
+                <a th:href="@{/}">Cancel</a>
+                </div>
+            </form>
+        </article>
+    </section>
+</div>

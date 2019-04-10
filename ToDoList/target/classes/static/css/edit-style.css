@@ -1,0 +1,108 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #FFFFFF;
+}
+
+#edit-wrapper {
+    width: 100%;
+    height: 100vh;
+    /*background-color: #4472C4;*/
+}
+
+h4 {
+    color: #000000;
+}
+.description {
+    font-size: 14px;
+}
+.edit {
+    text-align: center;
+}
+
+.home p {
+    font-size: 12px;
+}
+
+.edit article {
+    width: 43%;
+    padding: 0 5px;
+    display: inline-block;
+    background-color: #FBFFF8;
+    margin: 6px 5px;
+    color: #70726F;
+    text-align: center;
+    vertical-align: top;
+    position: relative;
+    border-radius: 9px;
+    border: 3px solid #70726F;
+}
+
+
+.edit button {
+    width: 26%;
+    background-color: rgba(94, 128, 225, 0.42);
+    padding: 6px 15px 6px 15px;
+    border: 3px solid #70726F;
+    border-radius: 5px;
+    color: #70726F;
+    font-weight: 600;
+    outline: none;
+    display: inline-block;
+    margin: 10px auto;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.edit a {
+    width: 20%;
+    background-color: #0000001a;
+    padding: 2px 7px 4px 10px;
+    border: 3px solid #70726F;
+    border-radius: 5px;
+    color: #70726F;
+    font-weight: 600;
+    outline: none;
+    display: inline-block;
+    margin: 10px auto;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.edit div button:nth-child(1) {
+    color: #70726F;
+}
+.edit div button:nth-child(1):hover{
+    color: white;
+    background-color: #5E80E1;
+    cursor: pointer;
+}
+.edit div a:nth-child(2):hover {
+    color: white;
+    background-color:#70726F ;
+}
+
+.edit label{
+    display: block;
+    width: 150px;
+    height: 0;
+    text-align: right;
+    margin-top: 10px;
+
+}
+.row {
+    text-align: center;
+
+}
+.edit textarea#comments{
+    width: 170px;
+    font-family: 'Open Sans TC', sans-serif;
+    resize: none;
+
+}
+.edit input#task{
+    width: 170px;
+    font-family: 'Open Sans TC', sans-serif;
+}
