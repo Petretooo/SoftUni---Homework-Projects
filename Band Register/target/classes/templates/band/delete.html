@@ -1,0 +1,27 @@
+<th:block>
+    <div id="band-wrapper">
+        <section class="band">
+            <article>
+                <form th:action="@{/delete/{id}(id=${band.id})}" method="POST">
+                    <h3>Do you want to remove the band from the list?</h3>
+                    <div class="row">
+                        <h2 th:text="${band.name}"></h2>
+                    </div>
+                    <div class="row">
+                        <p th:text="${band.members}"></p>
+                    </div>
+                    <div class="row">
+                        <p th:text="${band.honorarium}">$</p>
+                    </div>
+                    <div class="row">
+                        <p th:text="${band.genre}"></p>
+                    </div>
+                    <div>
+                        <button type="submit">Remove</button>
+                        <a href="/">Cancel</a>
+                    </div>
+                </form>
+            </article>
+        </section>
+    </div>
+</th:block>

@@ -1,0 +1,16 @@
+<th:block>
+    <section class="home">
+        <h2>Registered Bands:</h2>
+            <article th:each="band : ${bands}">
+                <h3 th:text="${band.name}"></h3>
+                <p th:text="${band.members}"></p>
+                <p th:text="${band.honorarium} + '$'"></p>
+                <p th:text="${band.genre}"></p>
+                <div>
+                    <a class="fas fa-edit" th:href="@{/edit/{id}(id=${band.id})}"></a>
+                    <a class="fas fa-trash-alt" th:href="@{/delete/{id}(id=${band.id})}"></a>
+                </div>
+            </article>
+        <a id="create-button" th:href="@{/create}">Register Band</a>
+    </section>
+</th:block>
