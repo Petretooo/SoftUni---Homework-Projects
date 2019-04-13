@@ -1,0 +1,20 @@
+<h1 xmlns:th="http://www.w3.org/1999/xhtml">Delete Game</h1>
+    <section>
+        <div xmlns:th="http://www.w3.org/1999/xhtml">
+            <form th:action="@{/delete/{id}(id=${game.id})}" method="POST">
+                <label for="name">Name</label>
+                <input type="text" id="name" th:value="${game.name}" name="name" disabled/>
+                <label for="dlc">DLC</label>
+                <input type="text" id="dlc" th:value="${game.dlc}" name="dlc" disabled/>
+                <label for="price">Price</label>
+                <input type="number" min="0" step="0.01" id="price" th:value="${game.price}" name="price"
+                       disabled/>
+                <label for="platform">Platform</label>
+                <input type="text" id="platform" th:value="${game.platform}" name="platform" disabled/>
+
+
+                <button class="button" type="submit">Delete</button>
+                <button class="button cancel" type="button" onclick="location.href='/'">Cancel</button>
+            </form>
+        </div>
+    </section>

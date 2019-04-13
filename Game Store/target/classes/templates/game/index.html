@@ -1,0 +1,35 @@
+<h1 xmlns:th="http://www.w3.org/1999/xhtml">Game Store</h1>
+
+    <div xmlns:th="http://www.w3.org/1999/xhtml">
+        <button class="add-new" th:onclick="'location.href = \'' + @{/create} + '\''">Create New Game</button>
+    </div>
+
+    <section xmlns:th="http://www.w3.org/1999/xhtml">
+        <div>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>DLC</th>
+                    <th>Price</th>
+                    <th>Platform</th>
+                    <th>Actions</th>
+                </tr>
+
+                    <tr th:each="game : ${games}">
+
+
+                        <td th:text="${game.name}"></td>
+                        <td th:text="${game.dlc}"></td>
+                        <td th:text="${game.price} + &euro;"></td>
+                        <td th:text="${game.platform}"></td>
+                        <td>
+
+                           <button th:onclick="'location.href = \'' + @{/edit/{id}(id=${game.id})} + '\''" class="edit">Edit</button>
+                           <button th:onclick="'location.href = \'' + @{/delete/{id}(id=${game.id})} + '\''" class="delete">Delete</button>
+
+                        </td>
+                    </tr>
+
+            </table>
+        </div>
+    </section>

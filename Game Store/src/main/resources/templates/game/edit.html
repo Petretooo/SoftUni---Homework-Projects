@@ -1,0 +1,47 @@
+
+    <h1>Edit Game</h1>
+    <section xmlns:th="http://www.w3.org/1999/xhtml">
+        <div>
+            <form th:action="@{/edit/{id}(id=${game.id})}" method="POST">
+                <label for="name">Name</label>
+                <input type="text" id="name" th:value="${game.name}" name="name" required/>
+                <label for="dlc">DLC</label>
+                <input type="text" id="dlc" th:value="${game.dlc}" name="dlc" required/>
+                <label for="price">Price</label>
+                <input type="number" min="0" step="0.01" id="price" th:value="${game.price}" name="price" required/>
+                <label for="platform">Platform</label>
+                <select name="platform" id="platform">
+
+                    <option th:text="${game.platform}"></option>
+
+                        <div th:if="${game.platform} == 'PlayStation 4'">
+                            <option>Mac</option>
+                            <option>PC</option>
+                            <option>PlayStation3</option>
+                        </div>
+
+                        <div th:if="${game.platform} == 'PlayStation 3'">
+                            <option>Mac</option>
+                            <option>PC</option>
+                            <option>PlayStation4</option>
+                        </div>
+
+                        <div th:if="${game.platform} == 'PC'">
+                            <option>Mac</option>
+                            <option>PlayStation3</option>
+                            <option>PlayStation4</option>
+                        </div>
+
+                        <div th:if="${game.platform} == 'Mac'">
+                            <option>PC</option>
+                            <option>PlayStation3</option>
+                            <option>PlayStation4</option>
+                        </div>
+                </select>
+
+
+                <button class="button" type="submit">Edit</button>
+                <button class="cancel button" type="button" onclick="location.href='/'">Cancel</button>
+            </form>
+        </div>
+    </section>

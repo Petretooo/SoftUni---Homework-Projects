@@ -1,0 +1,25 @@
+    <h1>Create Game</h1>
+    <section>
+        <div>
+            <form th:action="@{/create}" method="POST">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required/>
+                <label for="dlc">DLC</label>
+                <input type="text" id="dlc" name="dlc" required/>
+                <label for="price">Price</label>
+                <input type="number" min="0" step="0.01" id="price" name="price" required/>
+                <label for="platform">Platform</label>
+                <select name="platform" id="platform">
+                    <option value="PC">PC</option>
+                    <option value="Mac">Mac</option>
+                    <option value="PlayStation 4">PlayStation 4</option>
+                    <option value="PlayStation 3">PlayStation 3</option>
+                </select>
+
+
+
+                <button class="button" type="submit">Create</button>
+                <button class="button cancel" type="button" onclick="location.href='/'">Cancel</button>
+            </form>
+        </div>
+    </section>
