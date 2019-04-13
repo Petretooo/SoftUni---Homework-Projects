@@ -2,3 +2,5 @@
 2-Library
 3-Phonebook
 4-ToDoList
+5-Band Register
+6-Game Store
