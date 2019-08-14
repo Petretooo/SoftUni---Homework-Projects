@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+
+    <ul th:each="st : ${studentNames}">
+        <li th:text="${st}"></li>
+    </ul>
+
+    <form th:method="POST" th:action="@{/student/create}">
+        <input type="text" name="name" placeholder="Name"/>
+        <input type="number" name="age" placeholder="Age"/>
+        <input type="number" name="number" placeholder="Number"/>
+        <input type="submit"/>
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<h1>Himalayas Rescue Register</h1>
+
+<div class="button-holder" xmlns:th="http://www.w3.org/1999/xhtml">
+        <a type="button" th:href="@{/create}" class="button">Register a new Mountaineer</a>
+    </div>
+    <div class="content">
+        <div class="header">
+            <div class="mountaineer-label">Name</div>
+            <div class="mountaineer-label">Age</div>
+            <div class="mountaineer-label">Last Seen Date</div>
+            <div class="actions-label">Actions</div>
+        </div>
+        <th:block th:each="mountaineer : ${mountaineers}" xmlns:th="http://www.w3.org/1999/xhtml">
+        <div class="main">
+                <div class="mountaineer">
+                    <div class="mountaineer-item"th:text=${mountaineer.name}>
+                    </div>
+                    <div class="mountaineer-item" th:text=${mountaineer.age}>
+                    </div>
+                    <div class="mountaineer-item"th:text=${mountaineer.lastSeenDate}>
+                    </div>
+                    <div class="mountaineer-item mountaineer-actions">
+                        <a type="button" th:href="@{/edit/{id}(id=${mountaineer.id})}" class="mountaineerbutton">Edit</a>
+                        <a type="button" th:href="@{/delete/{id}(id=${mountaineer.id})}" class="mountaineerbutton">Remove</a>
+                    </div>
+                </div>
+        </div>
+        </th:block>
+    </div>
